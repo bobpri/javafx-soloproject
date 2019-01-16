@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml">
+	<VBox>
+	<Label text="직원수정"></Label>
+		<HBox>
+			<Label text="이름" prefWidth="50"></Label>
+			<TextField id="txtName" prefWidth="100"></TextField>
+		</HBox>
+		<HBox>
+			<Label text="전화번호" prefWidth="50"></Label>
+			<TextField id="txtNumber" prefWidth="100"></TextField>
+		</HBox>
+		<HBox>
+			<Label text="ID" prefWidth="50"></Label>
+			<TextField id="txtID" prefWidth="100"></TextField>
+		</HBox>
+		<HBox>
+			<Label text="PW" prefWidth="50"></Label>
+			<TextField id="txtPW" prefWidth="100"></TextField>
+		</HBox>
+		<HBox>
+			<Button id="btnEditAdd" text="저장 " />
+			<Button id="btnCancel" text="취소 " />
+		</HBox>
+	</VBox>
+</AnchorPane>
+

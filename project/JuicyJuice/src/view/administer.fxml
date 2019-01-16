@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.Administer" 
+prefHeight="100" prefWidth="280" >
+	<VBox alignment="CENTER">
+		<padding>
+			<Insets top="10" bottom="10" left="20" right="10"/>
+		</padding>
+		<HBox alignment="CENTER">
+			<Button fx:id = "btnStaffManage" prefWidth="100" prefHeight="100">직원관리</Button>
+			<Label text = "   "/>	
+			<Button fx:id = "btnMenuManage" prefWidth="100" prefHeight="100">메뉴관리</Button>
+			<Label text = "   "/>
+			<Button fx:id = "btnStatic" prefWidth="100" prefHeight="100">통계</Button>
+		</HBox>
+		<Label></Label>
+		<Label></Label>
+		<HBox alignment="CENTER">
+			<Button fx:id = "btnReturn" prefWidth="100">돌아가기</Button>
+			<Label text = "   "/>
+			<Button fx:id = "btnExit" prefWidth="100">종료</Button>
+		</HBox>
+	</VBox>
+</AnchorPane>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+	fx:controller="controller.StaffLoginController">
+	<VBox>
+		<ImageView fitHeight="200" fitWidth="200">
+			<image>
+				<Image
+					url="file:///D:/project/project/JuicyJuice/image/login.jpg" />
+			</image>
+		</ImageView>
+		<padding>
+			<Insets top="10" right="10" bottom="10" left="20" />
+		</padding>
+		<spacing>10</spacing>
+		<HBox alignment="CENTER">
+			<Label text="ID :  "></Label>
+			<TextField fx:id="txtStaffID" prefWidth="100"></TextField>
+		</HBox>
+		<HBox alignment="CENTER">
+			<Label text="PW : "></Label>
+			<PasswordField fx:id="txtStaffPW" prefWidth="100" />
+		</HBox>
+		<HBox alignment="CENTER">
+			<Button fx:id="btnLogin">로그인</Button>
+			<Label text="   "></Label>
+			<Button fx:id="btnCancle">취소</Button>
+		</HBox>
+	</VBox>
+</AnchorPane>
+

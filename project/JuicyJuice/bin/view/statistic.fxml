@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableRow?>
+<?import javafx.scene.control.Separator?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+	fx:controller="controller.StatisticController" prefWidth="300">
+	<HBox>
+		<VBox>
+			<Label text="           "></Label>
+			<Label text="    판매 목록"></Label>
+			<Label />
+			<HBox>
+				<Label text="   "></Label>
+				<TableView fx:id="tableView" prefHeight="280"
+					prefWidth="510" />
+			</HBox>
+			<Separator prefWidth="520"  prefHeight="60"></Separator>
+			<Label text="     통계"></Label>
+			<HBox>
+				<Label text="     "></Label>
+				<VBox>
+					<Label></Label>
+					<Label text="날짜검색 : "></Label>
+					<Label></Label>
+				</VBox>
+				<Label text="    " />
+				<VBox>
+					<Label text="          "></Label>
+					<DatePicker fx:id="dpDate1" prefWidth="120" promptText="시작일"></DatePicker>
+				</VBox>
+				<VBox>
+				<Label />
+					<Label text="        ~        "></Label>
+				</VBox>
+				<VBox>
+					<Label text="          "></Label>
+					<DatePicker fx:id="dpDate2" prefWidth="120" promptText="종료일"></DatePicker>
+				</VBox>
+				<Label text="   "></Label>
+				<VBox>
+					<Label></Label>
+					<Button fx:id="btnSearch">검색</Button>
+				</VBox>
+			</HBox>
+			<VBox>
+				<HBox>
+					<Label text="   "></Label>
+					<TableView fx:id="tableView2" prefHeight="200"
+						prefWidth="510"></TableView>
+				</HBox>
+			</VBox>
+			<Label text="   "></Label>
+			<HBox alignment="CENTER_RIGHT">
+				<Label
+					text="                                                                "></Label>
+				<Button fx:id="btnBarchart">월별통계</Button>
+				<!-- <Button fx:id="btnTotal">전체리스트</Button> -->
+				<Label text="   "></Label>
+				<Button fx:id="btnReturn">돌아가기</Button>
+				<Label text="   "></Label>
+				<Button fx:id="btnExit">종료</Button>
+			</HBox>
+		</VBox>
+	</HBox>
+</AnchorPane>
+

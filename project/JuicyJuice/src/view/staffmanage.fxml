@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.collections.ObservableList?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+	fx:controller="controller.StaffManageController" prefHeight="400"
+	prefWidth="580">
+	<HBox>
+		<VBox>
+			<padding>
+				<Insets bottom="10" left="10" right="10" top="10" />
+			</padding>
+			<HBox>
+				<Label text="직원추가"></Label>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="이름 :" prefWidth="60" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtSName" prefWidth="120" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="전화번호 :" prefWidth="60" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtSNumber" prefWidth="120" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="ID입력 :" prefWidth="60" />
+				</VBox>
+				<VBox>
+					<Label text=""></Label>
+					<TextField fx:id="txtSID" prefWidth="120" />
+				</VBox>
+				<Label text="  "></Label>
+				<VBox>
+					<Label></Label>
+					<Button fx:id="btnSIDcheck">중복확인</Button>
+				</VBox>
+				<Label text="    " />
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="PW입력 :" prefWidth="60" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtSPW" prefWidth="120" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="생일 :" prefWidth="60" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<DatePicker fx:id="dpDate" prefWidth="120"></DatePicker>
+				</VBox>
+			</HBox>
+			<Label></Label>
+			<Label></Label>
+			<HBox alignment="CENTER">
+				<Button fx:id="btnInput">입력</Button>
+				<Label text="   " />
+				<Button fx:id="btnClear">지우기</Button>
+			</HBox>
+		</VBox>
+		<VBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="직원목록"></Label>
+					<Label></Label>
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<TextField fx:id="txtSearch"></TextField>
+					<Label></Label>
+				</VBox>
+				<Label text="   "></Label>
+				<Button fx:id="btnSearch">검색</Button>
+				<Label text="   "></Label>
+				<Button fx:id="btnTotalList">전체</Button>
+			</HBox>
+			<TableView fx:id="tableView" prefHeight="310"
+				prefWidth="420" />
+			<Label></Label>
+			<HBox>
+				<Label
+					text="                                                     "></Label>
+				<Button fx:id="btnDelete" alignment="CENTER_RIGHT">삭제</Button>
+				<Label text="   "></Label>
+				<Button fx:id="btnEdit" alignment="CENTER_RIGHT">수정</Button>
+				<Label text="   "></Label>
+				<Button fx:id="btnReturn" alignment="CENTER_RIGHT">돌아가기</Button>
+				<Label text="   "></Label>
+				<Button fx:id="btnExit" alignment="CENTER_RIGHT">종료</Button>
+			</HBox>
+		</VBox>
+	</HBox>
+</AnchorPane>
+

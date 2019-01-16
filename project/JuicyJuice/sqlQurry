@@ -1,0 +1,109 @@
+create table administer(
+a_id varchar2(20) PRIMARY key,
+a_pw varchar2(20) not null
+);
+
+drop table administer;
+
+create sequence administer_seq
+start with 0
+increment by 1 
+maxvalue 9999999
+minvalue 0
+nocycle
+cache 2;
+
+INSERT INTO ADMINISTER
+VALUES ('asd','asd');
+
+select *
+from administer;
+
+select a_id, a_pw
+from administer
+where a_id = 'asd' and a_pw = 'asd';
+
+commit;
+--------------------------------------------------------------------------
+create table staff(
+s_no number(10) PRIMARY key,
+s_name varchar2(20) not null,
+s_number varchar2(11) not null,
+s_id varchar2(20) not null,
+s_pw varchar2(20) not null,
+s_birth varchar2(20)
+);
+
+insert into staff 
+values (staff_seq.nextval,'½Âºó','010','qwe','qwe','2018-08-07');
+
+update staff set s_id = 'qwe'
+where s_no = 1;
+
+commit;
+drop sequence staff_seq;
+drop table staff;
+
+select *
+from staff;
+
+create sequence staff_seq
+start with 0
+increment by 1 
+maxvalue 9999999
+minvalue 0
+nocycle
+;
+
+drop sequence staff_seq;
+--------------------------------------------------------------------------
+create table menu(
+mno number(20) not null unique,
+mname varchar2(20) PRIMARY key,
+mprice number(20) not null,
+mstuff varchar2(20) not null,
+mstock number(20) not null
+);
+
+drop table menu;
+drop sequence menu_seq;
+
+create sequence menu_seq
+start with 0
+increment by 1 
+maxvalue 9999999
+minvalue 0
+nocycle
+;
+
+select *
+from menu;
+
+--------------------------------------------------------------------------
+create table sell(
+sno number(20) PRIMARY key,
+sname varchar2(20) REFERENCES menu(mname),
+scount number(10) not null,
+sprice number(10) not null,
+spayment varchar2(10) not null,
+stotal number(20) not null,
+sdate date
+);
+
+drop table sell;
+drop sequence sell_seq;
+
+create sequence sell_seq
+start with 0
+increment by 1 
+maxvalue 9999999
+minvalue 0
+nocycle
+;
+
+select *
+from sell;
+
+select sname, sum(scount), sum(sprice)
+from sell
+group by sname;

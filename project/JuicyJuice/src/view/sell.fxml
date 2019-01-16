@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.collections.ObservableList?>
+<?import javafx.scene.control.ComboBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+	fx:controller="controller.SellController" prefWidth="1020"
+	style="-fx-background-color:#FFFFFF">
+	<padding>
+		<Insets bottom="10" left="10" right="10" top="30" />
+	</padding>
+	<HBox>
+		<VBox>
+			<HBox>
+				<Label text="판매"></Label>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   메뉴이름 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtSName" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   메뉴재료 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtStuff" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   메뉴가격 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtSPrice" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   현제 재고 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtStock" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   메뉴개수 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtSCount" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   총 금액 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtSTotal" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   결제방법 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<ComboBox fx:id="cbHow" promptText="선택" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   남은 재고 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtLastStock" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   받은금액 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtSTakeMoney" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<HBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   거스름돈 :" prefWidth="80" />
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<TextField fx:id="txtSGiveMoney" prefWidth="100" />
+				</VBox>
+			</HBox>
+			<Label></Label>
+			<Label></Label>
+			<HBox>
+				<Label text="            "></Label>
+				<Button fx:id="btnSInput">판매</Button>
+				<Label text="   "></Label>
+				<Button fx:id="btnSClear">지우기</Button>
+			</HBox>
+		</VBox>
+		<Label text="   " />
+		<VBox>
+			<Label text="   "></Label>
+			<HBox>
+				<Label
+					text="                                              메뉴목록"></Label>
+			</HBox>
+			<Label text="   "></Label>
+			<Label text="   "></Label>
+			<HBox>
+				<TextField fx:id="txtSearch"></TextField>
+				<Button fx:id="btnSearch">검색</Button>
+				<Label text="   "></Label>
+				<Label text="  판매일 : "></Label>
+				<VBox>
+					<DatePicker fx:id="dpDate"></DatePicker>
+					<Label></Label>
+				</VBox>
+			</HBox>
+			<TableView fx:id="tableView" prefHeight="380"
+				prefWidth="260" />
+		</VBox>
+		<VBox>
+			<Label text="   "></Label>
+			<HBox>
+				<Label
+					text="                                                       판매목록"></Label>
+			</HBox>
+			<Label text="   "></Label>
+			<Label text="   "></Label>
+			<HBox>
+				<Label text="   "></Label>
+				<DatePicker fx:id="dpDate1" promptText="시작일"></DatePicker>
+				<Label text="  ~  "></Label>
+				<VBox>
+					<DatePicker fx:id="dpDate2" promptText="종료일"></DatePicker>
+					<Label></Label>
+				</VBox>
+				<Label text="    "></Label>
+				<Button fx:id="btnSearch2">검색</Button>
+			</HBox>
+			<HBox>
+				<Label text="   "></Label>
+				<TableView fx:id="selltableView" prefHeight="380"
+					prefWidth="480" />
+			</HBox>
+			<HBox>
+				<Label
+					text="                                                                "></Label>
+				<VBox>
+					<Label text="   "></Label>
+					<Label></Label>
+					<Button fx:id="btnReturn" alignment="CENTER_LEFT">돌아가기</Button>
+				</VBox>
+				<VBox>
+					<Label></Label>
+					<Label text="   "></Label>
+					<HBox>
+						<Label text="     " />
+						<Button fx:id="btnExit" alignment="CENTER_LEFT">종료</Button>
+					</HBox>
+				</VBox>
+			</HBox>
+		</VBox>
+	</HBox>
+</AnchorPane>
+
